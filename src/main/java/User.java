@@ -16,6 +16,6 @@ public class User extends AbstractParentObject<Business>{
     }
 
     public User(String id, String name, Business parent, String pa) {
-        super(id, name, parent, pa);
+        super(id, name, parent, pa, Business.class);
     }
 }

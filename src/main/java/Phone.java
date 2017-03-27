@@ -6,7 +6,7 @@
 public class Phone extends AbstractParentObject<User> {
 
     public Phone(String id, String name, User parent) {
-        super(id, name, parent);
+        super(id, name, parent, User.class);
     }
 
     @Override

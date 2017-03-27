@@ -11,11 +11,13 @@ public class AbstractParentObject<P> extends AbstractObject{
 //    public String getTypeOfParent() {
 //        return this.parent.getClass().getSimpleName();
 //    }
+    final Class<P> clazzP;
 
-    public AbstractParentObject(String id, String name, P parent, String pa) {
+    public AbstractParentObject(String id, String name, P parent, String pa,Class<P> clazz) {
         super(id, name);
         this.parent = parent;
         this.pa = pa;
+        clazzP = clazz;
     }
 
     public String getPa() {
@@ -28,11 +30,13 @@ public class AbstractParentObject<P> extends AbstractObject{
 
     String pa;
 
-    AbstractParentObject(String id, String name, P parent) {
+    AbstractParentObject(String id, String name, P parent, Class<P> clazz) {
         super(id, name);
         this.parent = parent;
+        clazzP = clazz;
     }
 
+    @SuppressWarnings("")
     public P getParent() {
         return parent;
     }
